@@ -8,5 +8,8 @@
   },
   "author": "osama",
   "license": "ISC",
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "base64url": "^3.0.1"
+  }
 }

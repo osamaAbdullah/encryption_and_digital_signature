@@ -40,3 +40,24 @@
     6. decrypt the encripted_and_hashed_data with senders public key
 
     7. compare new_hashed_data with recived_hashed_data
+
+# JWT:
+
+    // issue
+
+    1. prepare raw header and payload
+
+    2. convert them to $base64urlHeader, $base64urlPayload
+
+    3. sign the $base64urlHeader, $base64urlPayload with private key
+
+    4. JWT = base64urlHeader + '.' + base64urlPayload + '.' + signatureBase64Url
+
+
+    // verify
+
+    1. split JWT to headerBase64Url, payloadBase64Url, signatureBase64Url
+
+    2. convert signatureBase64Url to signatureBase64
+
+    3. try to verify signatureBase64 with headerBase64Url + '.' + payloadBase64Url
